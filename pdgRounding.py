@@ -42,7 +42,7 @@ def pdg_round(mean,error):
     elif( threeDigitErrorValue > 950 ): error = pow(10,ceil(log10(error))/log10(10))
     # Round the error 
     newError = round_to_n(error,roundValue)
-    # Round the mean value, this bit doesn't work!!!!
+    # Round the mean value
     factor   = find_factor(error) 
     # Find new mean
     newMean = (round(float(mean)/pow(10,factor),roundValue)*pow(10,factor))
