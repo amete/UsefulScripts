@@ -43,7 +43,7 @@ def pdg_round(mean,error):
     # Round the error 
     newError = round_to_n(error,roundValue)
     # Find the new mean
-    factor   = find_factor(error) 
+    factor  = find_factor(error) 
     newMean = (round(float(mean)/pow(10,factor),roundValue)*pow(10,factor))
     # Match the precision of the mean w/ the error
     # There might be a possible limitation when the mean precision is lower then error precision
