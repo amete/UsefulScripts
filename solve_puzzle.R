@@ -5,7 +5,7 @@ solve_puzzle <- function (n,m,experiments=10000) {
     time.of.travels <- numeric()
     # Conduct a series experiments - can set the seed for reproducibility
     for(i in 1:experiments) {
-        x <- sample(0:80,n)                             # sample n traffic lights randomly
+        x <- sample(0:80,n,replace = TRUE)              # sample n traffic lights randomly
         sort(x)                                         # sort in ascending order
         x <- x[1:(length(x)-m)]                         # remove the ones w/ the magic wand optimally
         time.of.travels <- c(time.of.travels,sum(x))    # calculate the time of waiting
